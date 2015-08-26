@@ -1,0 +1,6 @@
+# Coverage directory used by tools like istanbul
+.idea
+.grunt
+coverage
+build/Release
+node_modules

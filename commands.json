@@ -1,0 +1,28 @@
+{
+  "getEvents": {
+    "type": "object",
+    "description":"Get Stripe events",
+    "properties": {
+      "stripe": {
+        "$ref": "#/definitions/stripe"
+      }
+    },
+    "required": ["stripe"]
+  },
+  ".definitions": {
+    "stripe":{
+      "type":"object",
+      ".linchpin": "Integrations/stripe",
+        "properties": {
+          "name": {
+          "type": "string",
+          "title": "Name"
+          },
+          "api_key":{
+          "type":"string"
+          }
+      },
+      "required": ["name","api_key"]
+      }
+    }
+}
