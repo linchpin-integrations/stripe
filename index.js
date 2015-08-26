@@ -60,14 +60,10 @@ module.exports = function(options) {
                     opts.starting_after = last_id;
                 }
 
-                console.log("getting events");
-
                 stripe.events.list(opts, function(err, response){
                     if(err){
                         return callback(err);
                     }
-
-                    console.log("got something");
 
                     list.push.apply(list,response.data);
                     if(response.has_more == true) {
